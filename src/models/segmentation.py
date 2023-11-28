@@ -464,7 +464,7 @@ class PointSegmentationModule(LightningModule):
         if targets is not None:
             self.test_cm(preds, targets)
         self.log(
-            "test2/loss", self.test_loss, on_step=False, on_epoch=True,
+            "test/loss", self.test_loss, on_step=False, on_epoch=True,
             prog_bar=True)
 
         # Prepare submission for held-out test sets
